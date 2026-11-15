@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Nav Menu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav id="navbar">
+    <a class="logo" href="#home">Kiro</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button class="btn-login" id="loginBtn">Login</button></li>
+    </ul>
+  </nav>
+
+  <!-- ── Login Modal ── -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <h2 id="modalTitle">Sign In</h2>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com" autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="••••••••" autocomplete="current-password" />
+        </div>
+        <p class="form-error" id="formError" aria-live="polite"></p>
+        <button type="submit" class="btn-submit">Sign In</button>
+      </form>
+
+      <p class="modal-footer">No account? <a href="#">Create one</a></p>
+    </div>
+  </div>
+
+  <!-- ── Sections ── -->
+  <section id="home">
+    <h1>Welcome Home</h1>
+    <p>Scroll down to see the navigation bar change its style as you move through the page.</p>
+    <a href="#about" class="btn-hero"><span>Get Started</span></a>
+  </section>
+
+  <section id="about">
+    <h1>About</h1>
+    <p>The nav shrinks and gains a dark background + shadow once you scroll past the top.</p>
+  </section>
+
+  <section id="work">
+    <h1>Work</h1>
+    <p>Each link highlights with a sliding underline on hover and turns purple when active.</p>
+  </section>
+
+  <section id="contact">
+    <h1>Contact</h1>
+    <p>On mobile, a hamburger menu replaces the link list with a smooth animated toggle.</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
